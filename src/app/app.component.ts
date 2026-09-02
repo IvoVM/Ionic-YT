@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { IonApp, IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, IonToolbar, IonHeader, IonTitle, IonButtons, IonButton } from '@ionic/angular';
+import { IonApp, IonButton, IonButtons, IonHeader, IonIcon, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, IonToolbar } from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
 import {
   home,
   library,
-  search
+  logoYoutube,
+  notifications,
+  search,
 } from 'ionicons/icons';
 
 @Component({
@@ -21,7 +23,6 @@ import {
     IonLabel,
     IonToolbar,
     IonHeader,
-    IonTitle,
     IonButtons,
     IonButton
 ],
@@ -50,7 +51,9 @@ export class AppComponent {
     addIcons({
       home,
       search,
-      library
+      library,
+      notifications,
+      logoYoutube,
     });
   }
 }
