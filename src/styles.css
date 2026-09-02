@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@source "./app/**/*.html";
+@source "./app/**/*.ts";
+@source "./index.html";
+
+@layer base {
+  ion-app.bg-black {
+    --ion-background-color: #000;
+  }
+
+  ion-app.bg-black ion-content {
+    --background: #000;
+  }
+
+  ion-app.bg-black ion-toolbar {
+    --background: #000;
+    --color: #fff;
+  }
+
+  ion-app.bg-black ion-tab-bar {
+    --background: #000;
+    --color: #fff;
+  }
+}

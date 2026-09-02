@@ -1,3 +1,24 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
+<ion-app class="bg-black text-white">
+  <ion-tabs>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>My App</ion-title>
+        <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon name="search"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-router-outlet></ion-router-outlet>
+
+    <ion-tab-bar slot="bottom">
+      @for (tab of tabs; track tab.name) {
+        <ion-tab-button [tab]="tab.name">
+          <ion-icon [name]="tab.icon"></ion-icon>
+          <ion-label>{{ tab.title }}</ion-label>
+        </ion-tab-button>
+      }
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-app>
