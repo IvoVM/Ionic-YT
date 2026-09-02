@@ -1,0 +1,7 @@
+{
+  "name": "ionic-YT",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
