@@ -3,10 +3,13 @@ import { IonApp, IonButton, IonButtons, IonHeader, IonIcon, IonLabel, IonRouterO
 
 import { addIcons } from 'ionicons';
 import {
+  add,
+  albums,
   home,
   library,
   logoYoutube,
   notifications,
+  play,
   search,
 } from 'ionicons/icons';
 
@@ -28,32 +31,16 @@ import {
 ],
 })
 export class AppComponent {
-
-  tabs = [
-    {
-      name: 'home',
-      icon: 'home',
-      title: 'Home'
-    },
-    {
-      name: 'search',
-      icon: 'search',
-      title: 'Search'
-    },
-    {
-      name: 'library',
-      icon: 'library',
-      title: 'Library'
-    }
-  ];
-
   constructor() {
     addIcons({
       home,
+      play,
+      albums,
       search,
       library,
       notifications,
       logoYoutube,
+      add
     });
   }
 }

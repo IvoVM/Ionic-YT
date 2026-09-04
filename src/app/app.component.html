@@ -1,33 +1,79 @@
 <ion-app class="bg-black text-white">
+
+  <ion-header>
+    <ion-toolbar class="px-2 text-white">
+      <div class="flex items-center gap-2 w-fit">
+        <ion-icon
+          class="text-2xl text-[#FF0000]"
+          name="logo-youtube">
+        </ion-icon>
+
+        <p class="text-xl font-bold w-fit">
+          Youtube
+        </p>
+      </div>
+
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon
+            class="text-white font-normal"
+            name="cast">
+          </ion-icon>
+        </ion-button>
+
+        <ion-button>
+          <ion-icon
+            class="text-white font-normal"
+            name="notifications">
+          </ion-icon>
+        </ion-button>
+
+        <ion-button>
+          <ion-icon
+            class="text-white font-normal"
+            name="search">
+          </ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
   <ion-tabs>
-    <ion-header>
-      <ion-toolbar class="px-2 text-white">
-        <div class="flex items-center gap-2 w-fit">
-          <ion-icon class="text-2xl text-[#FF0000]" name="logo-youtube"></ion-icon>
-          <p class="text-xl font-bold w-fit">Youtube</p>
-        </div>
-        <ion-buttons slot="end">
-          <ion-button>
-            <ion-icon class="text-white font-normal" name="cast"></ion-icon>
-          </ion-button>
-          <ion-button>
-            <ion-icon class="text-white font-normal" name="notifications"></ion-icon>
-          </ion-button>
-          <ion-button>
-            <ion-icon class="text-white font-normal" name="search"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-toolbar>
-    </ion-header>
+
     <ion-router-outlet></ion-router-outlet>
 
     <ion-tab-bar slot="bottom">
-      @for (tab of tabs; track tab.name) {
-        <ion-tab-button [tab]="tab.name">
-          <ion-icon [name]="tab.icon"></ion-icon>
-          <ion-label>{{ tab.title }}</ion-label>
-        </ion-tab-button>
-      }
+
+      <ion-tab-button tab="home">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Home</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="shorts">
+        <ion-icon name="play"></ion-icon>
+        <ion-label>Shorts</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button>
+        <ion-icon
+          class="border border-white rounded-full p-1 w-8 h-8 text-2xl"
+          name="add">
+        </ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="subscriptions">
+        <ion-icon name="albums"></ion-icon>
+        <ion-label>Subscriptions</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="library">
+        <ion-icon name="library"></ion-icon>
+        <ion-label>Library</ion-label>
+      </ion-tab-button>
+
     </ion-tab-bar>
+
   </ion-tabs>
+
 </ion-app>

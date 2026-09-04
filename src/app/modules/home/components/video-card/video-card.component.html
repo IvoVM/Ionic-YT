@@ -1,0 +1,35 @@
+<ion-card class="m-0 mb-3">
+  <ion-card-header>
+    <ion-card-title>
+      <video [src]="video().thumbnail"></video>
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content class="px-2 pt-2 pb-4 mt-4">
+    <div class="flex justify-between">
+      <div class="flex items-start gap-2">
+        <ion-avatar>
+          <img
+            alt="profile picture"
+            [src]="
+              video().profilePicture ||
+              'https://ionicframework.com/docs/img/demos/avatar.svg'
+            "
+          />
+        </ion-avatar>
+
+        <div>
+          <p>{{ video().title }}</p>
+          <p class="text-sm text-gray-500 mt-2">
+            {{ video().views }} views
+          </p>
+        </div>
+      </div>
+
+      <ion-icon
+        name="ellipsis-vertical"
+        class="mt-2"
+      />
+    </div>
+  </ion-card-content>
+</ion-card>
