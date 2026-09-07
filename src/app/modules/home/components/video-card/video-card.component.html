@@ -1,7 +1,14 @@
-<ion-card class="m-0 mb-3">
+<ion-card>
   <ion-card-header>
     <ion-card-title>
+      <!--
       <video [src]="video().thumbnail"></video>
+      -->
+      <img
+        [src]="video().thumbnail"
+        [alt]="video().title"
+        class="block aspect-video w-full object-cover"
+      />
     </ion-card-title>
   </ion-card-header>
 

@@ -24,10 +24,6 @@ import {
     IonTabButton,
     IonTabs,
     IonLabel,
-    IonToolbar,
-    IonHeader,
-    IonButtons,
-    IonButton
 ],
 })
 export class AppComponent {

@@ -1,0 +1,41 @@
+<ion-card class="relative m-0 h-[264px] w-[158px] shrink-0 overflow-hidden">
+
+  <!--
+  <video
+    [src]="short().thumbnail"
+    class="absolute inset-0 h-full w-full object-cover"
+    autoplay
+    muted
+    loop
+    playsinline>
+  </video>
+  -->
+
+  <img
+    [src]="short().thumbnail"
+    [alt]="short().title"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+
+  <div
+    class="absolute inset-x-0 bottom-0 h-20 bg-linear-to-t from-black/80 to-transparent">
+  </div>
+
+  <div class="absolute right-1 top-1 z-10">
+    <ion-button
+      fill="clear"
+      class="m-0"
+      aria-label="Más opciones">
+      <ion-icon
+        slot="icon-only"
+        name="ellipsis-vertical">
+      </ion-icon>
+    </ion-button>
+  </div>
+
+  <p
+    class="absolute bottom-0 left-0 right-0 m-0 line-clamp-2 p-3 text-sm font-semibold text-white">
+    {{ short().title }}
+  </p>
+
+</ion-card>
