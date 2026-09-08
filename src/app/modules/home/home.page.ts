@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonContent, IonIcon } from '@ionic/angular';
+import { IonContent, IonHeader, IonIcon, IonToolbar } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { logoYoutube } from 'ionicons/icons';
 import { ShortCardComponent } from "./components/short-card/short-card.component";
@@ -8,7 +8,7 @@ import { VideoCardComponent } from './components/video-card/video-card.component
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
-  imports: [IonContent, VideoCardComponent, ShortCardComponent, IonIcon],
+  imports: [IonContent, VideoCardComponent, ShortCardComponent, IonIcon, IonHeader, IonToolbar],
 })
 export class HomePage {
   shorts: any[] = [
