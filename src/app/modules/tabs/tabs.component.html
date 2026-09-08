@@ -12,7 +12,7 @@
         <ion-label>Shorts</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button>
+      <ion-tab-button (click)="openModal()">
         <ion-icon
           class="h-7 w-7 rounded-full border border-white p-1 text-2xl"
           name="add">
@@ -32,3 +32,4 @@
     </ion-tab-bar>
 
   </ion-tabs>
+<app-create-modal  (close)="this.isModalOpen.set(false)" [isModalOpen]="isModalOpen()"></app-create-modal>

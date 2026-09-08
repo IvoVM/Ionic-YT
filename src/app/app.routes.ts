@@ -6,7 +6,7 @@ export const routes: Routes = [
     loadComponent: () => import('./modules/tabs/tabs.component').then((m) => m.TabsComponent),
     children:[
       {
-        path: 'home',
+        path: '',
         loadComponent: () => import('./modules/home/home.page').then((m) => m.HomePage),
       },
       {
@@ -21,7 +21,7 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
 ];
